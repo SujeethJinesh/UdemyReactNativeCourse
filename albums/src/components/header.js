@@ -5,16 +5,17 @@ import { Text, View } from 'react-native';
 
 //Make a component
 
-const Header = () => {
+const Header = (props) => {
 
 	const { textStyle, viewStyle } = styles; //use destructuring
 
 
 	//adding a prop to the text style to ensure changes
+	//when referring to js objects use curly braces
 	return (
 
 		<View style={viewStyle}>
-			<Text style={textStyle}>Albums!</Text>
+			<Text style={textStyle}>{props.headerText}</Text> 
 		</View>
 
 	);
