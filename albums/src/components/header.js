@@ -1,22 +1,30 @@
 //Import lib for making a component
 
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 //Make a component
 
 const Header = () => {
 
-	const { textStyle } = styles;
+	const { textStyle, viewStyle } = styles; //use destructuring
 
 
 	//adding a prop to the text style to ensure changes
-	return <Text style={textStyle}>Albums!</Text>;
+	return (
+
+		<View style={viewStyle}>
+			<Text style={textStyle}>Albums!</Text>
+		</View>
+
+	);
 };
 
 //Now we make styling objects
-
 const styles = {
+	viewStyle: {
+		backgroundColor: "#F8F8F8" //most jsx props are the same as css, check documentation
+	},
 	textStyle: {
 		fontSize: 20
 	}
