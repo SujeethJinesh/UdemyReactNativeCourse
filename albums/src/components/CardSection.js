@@ -11,6 +11,8 @@ const CardSection = (props) => {
 	);
 };
 
+
+//Flex direction determines the orientation and justify content determines spacing
 const styles = {
 	containerStyle: {
 		borderBottomWidth: 1,
