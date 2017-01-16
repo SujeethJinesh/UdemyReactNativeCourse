@@ -9,8 +9,10 @@ import AlbumList from './src/components/AlbumList';
 
 //Creating component here
 //note to NOT put semicolons after components
+//In order to make sure content is totally scrollable,
+//use the flex: 1 property in the root view tag
 const App = () => (
-	<View>
+	<View style={{flex: 1}}>
 		<Header headerText={"Albums"}/> 
 		<AlbumList/>
 	</View>

@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View, Image} from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const AlbumDetail = ({album}) => { //here we are receiving our props object from the call
 	//In this case we are sending in the text component as a prop to the card component
@@ -25,6 +26,7 @@ const AlbumDetail = ({album}) => { //here we are receiving our props object from
 	//VERY IMPORTANT TO SPECIFY OCCUPYING SIZE FOR IMAGE TAG
 	return (
 		<Card>
+
 			<CardSection>
 				<View style={thumbnailContainerStyle}>
 					<Image
@@ -42,6 +44,10 @@ const AlbumDetail = ({album}) => { //here we are receiving our props object from
 				<Image
 				style={imageStyle}
 				source={{ uri: image }}/>
+			</CardSection>
+
+			<CardSection>
+				<Button onPress={() => console.log(title)}/>
 			</CardSection>
 
 		</Card>
